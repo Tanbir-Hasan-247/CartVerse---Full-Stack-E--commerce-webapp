@@ -1,10 +1,10 @@
 ```
- ██████╗ ██╗  ██╗██╗███╗   ███╗ █████╗ ██████╗ ████████╗
- ██╔══██╗██║  ██║██║████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝
- ██████╔╝███████║██║██╔████╔██║███████║██████╔╝   ██║   
- ██╔═══╝ ██╔══██║██║██║╚██╔╝██║██╔══██║██╔══██╗   ██║   
- ██║     ██║  ██║██║██║ ╚═╝ ██║██║  ██║██║  ██║   ██║   
- ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+██████╗  █████╗ ██████╗ ████████╗██╗   ██╗███████╗██████╗ ███████╗███████╗
+██╔════╝ ██╔══██╗██╔══██╗╚══██╔══╝██║   ██║██╔════╝██╔══██╗██╔════╝██╔════╝
+██║      ███████║██████╔╝   ██║   ██║   ██║█████╗  ██████╔╝███████╗█████╗  
+██║      ██╔══██║██╔══██╗   ██║   ╚██╗ ██╔╝██╔══╝  ██╔══██╗╚════██║██╔══╝  
+╚██████╗ ██║  ██║██║  ██║   ██║    ╚████╔╝ ███████╗██║  ██║███████║███████╗
+ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝     ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝ 
 ```
 
 ### 🛒 A Scalable RESTful E-Commerce API Backend
@@ -28,7 +28,7 @@
 
 <br/>
 
-[**API Documentation**](http://127.0.0.1:8000/docs/) · [**Report a Bug**](https://github.com/Tanbir-Hasan-247/PhiMart/issues) · [**Request a Feature**](https://github.com/Tanbir-Hasan-247/PhiMart/issues)
+[**API Documentation**](http://127.0.0.1:8000/docs/) · [**Report a Bug**](https://github.com/Tanbir-Hasan-247/CartVerse/issues) · [**Request a Feature**](https://github.com/Tanbir-Hasan-247/CartVerse/issues)
 
 <br/>
 
@@ -57,12 +57,12 @@
 
 ## 🌟 About The Project
 
-**PhiMart** is a fully functional, highly scalable e-commerce backend REST API built with Django and Django REST Framework (DRF). It provides a complete suite of endpoints covering the full e-commerce lifecycle — from user registration and email activation, through product catalog browsing and cart management, all the way to order placement and status tracking.
+**CartVerse** is a fully functional, highly scalable e-commerce backend REST API built with Django and Django REST Framework (DRF). It provides a complete suite of endpoints covering the full e-commerce lifecycle — from user registration and email activation, through product catalog browsing and cart management, all the way to order placement and status tracking.
 
-Engineered for clean separation of concerns, PhiMart is designed to be the backbone of any modern frontend — whether that's a React SPA, a mobile app, or a Next.js storefront.
+Engineered for clean separation of concerns, CartVerse is designed to be the backbone of any modern frontend — whether that's a React SPA, a mobile app, or a Next.js storefront.
 
-> 💡 **Why PhiMart?**
-> E-commerce backends are notoriously complex to get right. PhiMart ships with JWT auth via Djoser, anonymous cart sessions, multi-image product support, admin-controlled order status transitions, and interactive Swagger docs — all out of the box.
+> 💡 **Why CartVerse?**
+> E-commerce backends are notoriously complex to get right. CartVerse ships with JWT auth via Djoser, anonymous cart sessions, multi-image product support, admin-controlled order status transitions, and interactive Swagger docs — all out of the box.
 
 ---
 
@@ -167,7 +167,7 @@ Auto-generated and always in sync via `drf-spectacular`:
 
 ```
 +-------------------------------------------------------------------+
-|                          PhiMart API                              |
+|                          CartVerse API                              |
 |                                                                   |
 |  +------------+   +-----------+   +----------+   +----------+    |
 |  |   Public   |   |   Buyer   |   |  Admin   |   | Frontend |    |
@@ -353,8 +353,8 @@ Ensure the following are installed:
 **Step 1 — Clone the repository**
 
 ```bash
-git clone https://github.com/Tanbir-Hasan-247/PhiMart.git
-cd PhiMart
+git clone https://github.com/Tanbir-Hasan-247/CartVerse.git
+cd CartVerse
 ```
 
 **Step 2 — Create and activate a virtual environment**
@@ -438,7 +438,7 @@ SITE_NAME=PhiMart
 
 ## 📚 API Documentation
 
-PhiMart ships with **auto-generated, always-in-sync** interactive documentation via `drf-spectacular`:
+CartVerse ships with **auto-generated, always-in-sync** interactive documentation via `drf-spectacular`:
 
 <div align="center">
 
@@ -455,7 +455,7 @@ PhiMart ships with **auto-generated, always-in-sync** interactive documentation 
 ## 📁 Project Structure
 
 ```
-PhiMart/
+CartVerse/
 |
 +-- manage.py
 +-- requirements.txt
@@ -537,7 +537,7 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more informa
 
 <br/>
 
-*If PhiMart was useful to you, please consider giving it a ⭐ — it really helps!*
+*If CartVerse was useful to you, please consider giving it a ⭐ — it really helps!*
 
 </div>
 
@@ -547,6 +547,6 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more informa
 
 Made with ❤️ and ☕ by **Tanbir Hasan**
 
-*PhiMart — Powering commerce, one API call at a time.*
+*CartVerse — Powering commerce, one API call at a time.*
 
 </div>

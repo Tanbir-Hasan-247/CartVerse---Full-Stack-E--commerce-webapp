@@ -2,6 +2,7 @@ import AllProduct from "./AllProduct";
 import Pagination from "./Pagination";
 import useFetchProduct from "../Hooks/useFetchProducts";
 import { useState } from "react";
+import FilterSection from "./FilterProduct";
 
 const ProductPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,7 +33,9 @@ const ProductPage = () => {
   
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold">Shop Our Products</h1>
+      <FilterSection/>
       <AllProduct products={products} loading={loading} />
 
       <Pagination
