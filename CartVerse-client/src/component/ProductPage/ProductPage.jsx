@@ -3,39 +3,41 @@ import Pagination from "./Pagination";
 import useFetchProduct from "../Hooks/useFetchProducts";
 import { useState } from "react";
 import FilterSection from "./FilterProduct";
+import useFetchCategories from "../Hooks/useFetchCategories";
 
 const ProductPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const {products, loading, totalPages} = useFetchProduct(currentPage);
+  const [priceRange, setPriceRange] = useState([0, 1000]);
+  const [selectedCategories, setSelectedCategories] = useState("");
+  const [searchQuary, setSearchQuary] = useState("");
+  const [sortOrder, setSortOrder] = useState("");
+  const {products, loading, totalPages} = useFetchProduct(currentPage, priceRange, selectedCategories, searchQuary, sortOrder);
+  const categories = useFetchCategories();
 
-  //   const fetchProducts = () => {
-  //     setLoading(true);
+  const handlePriceChange=(index, value)=>{
+    setPriceRange((prev)=>{
+      const newRange = [...prev];
+      newRange[index] = value;
+      return newRange;
+    });
 
-  //     apiClient
-  //       .get(`/products/?page=${currentPage}`)
-  //       .then((res) => {
-  //         setProducts(res.data.results);
-
-  //         // শুধু প্রথমবার page size ধরবে
-  //         if (maxItemInPage.current === 0) {
-  //           maxItemInPage.current = res.data.results.length;
-
-  //           setTotalPages(
-  //             Math.ceil(
-  //               res.data.count / maxItemInPage.current
-  //             )
-  //           );
-  //         }
-  //       })
-  //       .catch((error) => console.log(error))
-  //       .finally(() => setLoading(false));
-  //   };
-  
+    setCurrentPage(1);
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold">Shop Our Products</h1>
-      <FilterSection/>
+      <FilterSection
+        priceRange={priceRange}
+        handlePriceChange={handlePriceChange}
+        categories = {categories}
+        selectedCategory={selectedCategories}
+        handleCategoriesChange = {setSelectedCategories}
+        searchQuary = {searchQuary}
+        handleSearchQuary = {setSearchQuary}
+        sortOrder = {sortOrder}
+        handleOrderChange = {setSortOrder}
+      />
       <AllProduct products={products} loading={loading} />
 
       <Pagination

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import apiClient from "../../services/api-client";
 
-const useFetchProduct = (currentPage) => {
+const useFetchProduct = (currentPage, priceRange, selectedCategories, searchQuary, sortOrder) => {
       const [products, setProducts] = useState([]);
       const [loading, setLoading] = useState(false);
       const [totalPages, setTotalPages] = useState(0);
@@ -11,9 +11,10 @@ const useFetchProduct = (currentPage) => {
     useEffect(()=>{
         const fetchProducts = async () => {
         setLoading(true);
-
+        
+        const url = `/products/?price__lt=${priceRange[1]}&price__gt=${priceRange[0]}&page=${currentPage}&category_id=${selectedCategories}&search=${searchQuary}&ordering=${sortOrder}`;
         try {
-        const response = await apiClient.get(`/products/?page=${currentPage}`);
+        const response = await apiClient.get(url);
         const data = response.data;
         setProducts(data.results);
         if (maxItemInPage.current === 0) {
@@ -28,7 +29,7 @@ const useFetchProduct = (currentPage) => {
         }
     };
     fetchProducts();
-    }, [currentPage]);
+    }, [currentPage, priceRange, selectedCategories, searchQuary, sortOrder]);
 
     return {products, loading, totalPages};
 };
